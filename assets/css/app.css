@@ -2,8 +2,27 @@
 
 @import "~milligram/dist/milligram";
 
-.column > p {
-    padding-top: 10ex;
-    text-align: center;
+html,
+body,
+.container,
+.row {
+  height: 100%;
 }
 
+.tile {
+  border: 2px solid gray;
+  height: 100px;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  display: block;
+  padding-top: 25px;
+}
+
+.completed {
+  background-color: lightgreen;
+  color: white;
+}
+
+#score {
+  margin-left: 10px;
+}

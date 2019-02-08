@@ -19,9 +19,11 @@ import socket from "./socket";
 
 import game_init from "./starter-game";
 
-let channel = socket.channel("games:demo", {});
-
+// Now that you are connected, you can join channels with a topic:
 $(() => {
-  let root = $("#root")[0];
-  game_init(root, channel);
+  let root = document.getElementById("root");
+  if (root) {
+    let channel = socket.channel("games:" + window.gameName, {});
+    game_init(root, channel);
+  }
 });

@@ -1,4 +1,11 @@
 <h1>Ian's Memory Game</h1>
-<div id="root">
-  React app loading...
-</div>
+<input id="input" type="text" placeholder="Type channel name here">
+<button onClick="start()">Start game</button>
+<script type="text/javascript">
+function start(){
+let channelName = document.getElementById("input").value;
+if (channelName.length > 0) {
+  location.href = "/game/" + channelName;
+}
+}
+</script>
